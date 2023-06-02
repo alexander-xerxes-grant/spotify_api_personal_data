@@ -1,0 +1,9 @@
+repos:
+-   repo: https://github.com/psf/black
+    rev: 22.1.0  # Update this to the version you're using
+    hooks:
+    -  id: black
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 4.0.1  # Update this to the version you're using
+    hooks:
+    -  id: flake8
