@@ -17,7 +17,3 @@ def index():
 def get_token():
     token_info = get_spotify_auth_token()
     return jsonify(token_info)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
