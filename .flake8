@@ -1,0 +1,5 @@
+[flake8]
+application_import_names =
+    spotify_api_personal_data
+
+exclude = .git,.history,.venv

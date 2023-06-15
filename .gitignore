@@ -1,0 +1,15 @@
+.env*
+!.env*.example
+.coverage
+reports
+requirements.txt
+*.pyc
+__pycache__
+*.egg-info/
+
+# IDE
+.history
+.vscode
+.DS_Store
+.idea/
+.venv
