@@ -15,5 +15,12 @@ def index():
 
 @app.route("/token", methods=["GET"])
 def get_token():
-    token_info = get_spotify_auth_token()
-    return jsonify(token_info)
+    try:
+        token_info = get_spotify_auth_token()
+        return jsonify(token_info), 200
+    except Exception as e:
+        response = {
+            "error": str(e),
+            "description": e.__class__.__name__
+        }
+        return jsonify(response), 500
