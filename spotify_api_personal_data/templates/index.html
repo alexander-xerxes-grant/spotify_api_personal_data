@@ -1,0 +1,12 @@
+<!-- templates/index.html -->
+
+<h1>My Spotify Profile</h1>
+
+<h2>Logged in as {{ profile.display_name }}</h2>
+<img src="{{ profile.images[0].url }}" alt="Profile image">
+<ul>
+    <li>User ID: {{ profile.id }}</li>
+    <li>Email: {{ profile.email }}</li>
+    <li>Spotify URI: <a href="{{ profile.uri }}">{{ profile.uri }}</a></li>
+    <li>Link: <a href="{{ profile.external_urls.spotify }}">{{ profile.external_urls.spotify }}</a></li>
+</ul>

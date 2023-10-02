@@ -92,12 +92,10 @@ class TestSpotifyAuth:
         # Arrange
         refresh_token = "test_refresh_token"
         mock_open = mocker.patch("builtins.open", mocker.mock_open())
-        
+
         # Act
         SpotifyAuth.store_refresh_token(refresh_token)
-        
+
         # Assert
         mock_open.assert_called_once_with("refresh_token.txt", "w")
         mock_open().write.assert_called_once_with(refresh_token)
-
-        
