@@ -3,10 +3,10 @@ from unittest.mock import patch
 import pytest
 
 
-
 def test_check_for_env_file_returns_false_when_no_env_file():
-    with patch('os.path.isfile', return_value=False):
+    with patch("os.path.isfile", return_value=False):
         assert check_for_env_file() == False
+
 
 def test_function_raises_on_incorrect_string_length():
     mock_spotify_client_var = "not32characterslong"

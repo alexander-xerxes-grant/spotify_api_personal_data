@@ -1,72 +1,76 @@
-# TODO
+Setup and Configuration
+Environment Variables
 
-## Setup and Configuration
+    Subtask: [Done] Update the .env.example file with all required environment variables.
+        Created .env.example with SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET
+    Subtask: Update the README with instructions on copying .env.example to .env and filling out the variables.
+        Note: Consider automating this with a script.
+    Subtask: [New, Done] Create a script to populate .env file from user input.
+        Script asks for SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET
+        Validations added for variable length
+        Quotes stripped if added
 
-### Environment Variables
+Database Configuration
 
-1. **Subtask:** Update the `.env.example` file with all required environment variables.
-2. **Subtask:** Update the README with instructions on copying `.env.example` to `.env` and filling out the variables.
+    Subtask: Research options for a lightweight database (SQLite, PostgreSQL).
+    Subtask: Add chosen database to poetry.lock.
+    Subtask: Update README with database setup instructions.
 
-### Database Configuration
+Must-Have Features
+OAuth2 Authentication
 
-1. **Subtask:** Research options for a lightweight database (SQLite, PostgreSQL).
-2. **Subtask:** Add chosen database to `poetry.lock`.
-3. **Subtask:** Update README with database setup instructions.
+    Subtask: Research Flask-OAuthlib as a potential OAuth2 implementation.
+    Subtask: Add OAuth2 routes.
+    Subtask: Store tokens in a database instead of a file.
 
-## Must-Have Features
+Fetch and Display Playlists
 
-### OAuth2 Authentication
+    Subtask: Extend SpotifyAPI class to include a get_playlists method.
+    Subtask: Create a new route /playlists to display playlists.
+    Subtask: Fetch playlists in the new route and display them.
 
-1. **Subtask:** Research Flask-OAuthlib as a potential OAuth2 implementation.
-2. **Subtask:** Add OAuth2 routes.
-3. **Subtask:** Store tokens in a database instead of a file.
+Error Handling
 
-### Fetch and Display Playlists
+    Subtask: Implement try-except blocks for API calls.
+    Subtask: Add custom exception classes.
+    Subtask: Write a general error handler in Flask.
 
-1. **Subtask:** Extend `SpotifyAPI` class to include a `get_playlists` method.
-2. **Subtask:** Create a new route `/playlists` to display playlists.
-3. **Subtask:** Fetch playlists in the new route and display them.
+Should-Have Features
+Testing
 
-### Error Handling
+    Subtask: [New, Partially Done] Write unit tests for .env setup script.
+        Tested function that checks variable length
+    Subtask: Write unit tests for OAuth2 routes.
+    Subtask: Write unit tests for get_playlists.
+    Subtask: Create mock objects for testing the Spotify API.
 
-1. **Subtask:** Implement try-except blocks for API calls.
-2. **Subtask:** Add custom exception classes.
-3. **Subtask:** Write a general error handler in Flask.
+Pagination Support
 
-## Should-Have Features
+    Subtask: Add a page query parameter to the /tracks and /playlists routes.
+    Subtask: Implement pagination in SpotifyAPI methods.
+    Subtask: Update the frontend to allow page navigation.
 
-### Testing
+Code Quality
 
-1. **Subtask:** Write unit tests for OAuth2 routes.
-2. **Subtask:** Write unit tests for `get_playlists`.
-3. **Subtask:** Create mock objects for testing the Spotify API.
+    Subtask: Run code quality checks using make lint.
+    Subtask: Fix any issues reported by the linters.
+    Subtask: Set up a CI/CD pipeline with GitHub Actions.
 
-### Pagination Support
+Could-Have Features
+Additional API Features
 
-1. **Subtask:** Add a `page` query parameter to the `/tracks` and `/playlists` routes.
-2. **Subtask:** Implement pagination in `SpotifyAPI` methods.
-3. **Subtask:** Update the frontend to allow page navigation.
+    Subtask: Add a method in SpotifyAPI to fetch albums.
+    Subtask: Add a method in SpotifyAPI to fetch artist details.
 
-### Code Quality
+Frontend Improvements
 
-1. **Subtask:** Run code quality checks using `make lint`.
-2. **Subtask:** Fix any issues reported by the linters.
-3. **Subtask:** Set up a CI/CD pipeline with GitHub Actions.
+    Subtask: Research and choose a frontend library (React, Angular).
+    Subtask: Rewrite the frontend using the chosen library.
+    Subtask: Style the frontend using a CSS framework (Bootstrap, TailwindCSS).
 
-## Could-Have Features
+Won't-Have Features (for now)
 
-### Additional API Features
+    Subtask: Document why real-time updates won't be implemented at this stage.
+    Subtask: Document why sharing capabilities won't be added at this stage.
 
-1. **Subtask:** Add a method in `SpotifyAPI` to fetch albums.
-2. **Subtask:** Add a method in `SpotifyAPI` to fetch artist details.
-
-### Frontend Improvements
-
-1. **Subtask:** Research and choose a frontend library (React, Angular).
-2. **Subtask:** Rewrite the frontend using the chosen library.
-3. **Subtask:** Style the frontend using a CSS framework (Bootstrap, TailwindCSS).
-
-## Won't-Have Features (for now)
-
-1. **Subtask:** Document why real-time updates won't be implemented at this stage.
-2. **Subtask:** Document why sharing capabilities won't be added at this stage.
+Let me know if this captures all the details or if there's anything more you'd like to add.

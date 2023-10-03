@@ -5,8 +5,10 @@
 
 import os
 
+
 def check_for_env_file():
     return os.path.isfile(".env")
+
 
 def check_api_variable_length(spotify_client_var, spotify_client_var_name):
     if len(spotify_client_var) != 32:
@@ -18,8 +20,8 @@ def get_input(spotify_client_var_name):
         f"Please input your {spotify_client_var_name} (32 character string): "
     )
     check_api_variable_length(spotify_client_var, spotify_client_var_name)
-    
-    return spotify_client_var.strip('\'"')
+
+    return spotify_client_var.strip("'\"")
 
 
 def write_to_env(spotify_client_id, spotify_client_secret):
@@ -34,5 +36,6 @@ def execute():
     spotify_client_id, spotify_client_secret = get_input(spotify_client_var_name)
     write_to_env(spotify_client_id, spotify_client_secret)
 
+
 if __name__ == "__main__":
-    execute() 
+    execute()
