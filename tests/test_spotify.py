@@ -22,7 +22,8 @@
 
 # def test_get_spotify_auth_token_without_env_vars():
 #     # Unset the environment variables if they exist
-#     with patch.dict(os.environ, {"SPOTIFY_CLIENT_ID": "", "SPOTIFY_CLIENT_SECRET": ""}):
+#     with patch.dict(os.environ, {"SPOTIFY_CLIENT_ID": "",
+#           "SPOTIFY_CLIENT_SECRET": ""}):
 #         with pytest.raises(EnvironmentError):
 #             auth.get_spotify_auth_token()
 

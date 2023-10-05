@@ -1,5 +1,14 @@
 # spotify_api_personal_data/spotify_api.py
 
+"""Client for interacting with the Spotify API.
+
+This module contains classes for handling both authentication and
+basic API requests to Spotify's Web API.
+It supports getting user authorization, refreshing access tokens,
+and retrieving saved tracks for a user.
+"""
+
+
 import base64
 import os
 from urllib.parse import urlencode
@@ -93,7 +102,7 @@ class SpotifyAPI:
         response = requests.get(endpoint, headers=headers, params=params)
 
         if response.status_code == 200:
-            data = response.json()
+            response.json()
 
         else:
             raise Exception(response.status_code, response.text)

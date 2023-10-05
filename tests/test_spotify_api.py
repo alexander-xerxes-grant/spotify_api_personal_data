@@ -52,7 +52,8 @@ class TestSpotifyAuth:
             {"SPOTIFY_CLIENT_ID": client_id},
         )
         expected_url = (
-            "https://accounts.spotify.com/authorize?client_id=test_client_id&response_type=code"
+            "https://accounts.spotify.com/authorize?"
+            "client_id=test_client_id&response_type=code"
             "&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fcallback&state=state"
             "&scope=user-read-private+user-read-email+user-library-read"
         )

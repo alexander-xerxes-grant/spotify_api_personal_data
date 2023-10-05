@@ -1,7 +1,5 @@
-# Script that asks the user for their SPOTIFY_CLIENT_SECRET and
-# SPOTIFY_CLIENT_ID, creates a .env file and populates it with them
+"""Script to help developers setup their environment to develop this project."""
 
-# check file exists > if not then create one and say you are > then take input > then write to file
 
 import os
 import re
@@ -35,7 +33,7 @@ def write_to_env(spotify_client_var_name: str, spotify_client_var: str):
 
 
 def execute():
-    if check_for_env_file() == False:
+    if check_for_env_file() is False:
         print("Creating .env file.")
     spotify_client_id = get_input(spotify_client_var_name="SPOTIFY_CLIENT_ID")
     spotify_client_secret = get_input(spotify_client_var_name="SPOTIFY_CLIENT_SECRET")
