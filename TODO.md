@@ -1,14 +1,26 @@
-Setup and Configuration
-Environment Variables
+# TODO
 
-    Subtask: [Done] Update the .env.example file with all required environment variables.
-        Created .env.example with SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET
-    Subtask: Update the README with instructions on copying .env.example to .env and filling out the variables.
-        Note: Consider automating this with a script.
-    Subtask: [New, Done] Create a script to populate .env file from user input.
-        Script asks for SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET
-        Validations added for variable length
-        Quotes stripped if added
+## Setup and Configuration
+
+### Environment Variables
+
+- Subtask: [Done] Update the .env.example file with all required environment variables.
+    - Created .env.example with SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET
+
+- Subtask: Update the README with instructions on copying .env.example to .env and filling out the variables.
+    - Note: Consider automating this with a script.
+
+- Subtask: [New, Done] Create a script to populate .env file from user input.
+    - Script asks for SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET
+    - Validations added for variable length
+    - Quotes stripped if added
+
+- Subtask: [New] Rename setup script to `dev_environment_setup.py`
+    - Done: Renamed to better indicate its purpose for development environment setup
+
+- Subtask: [New] Update test coverage to include `dev_environment_setup.py`
+    - Done: Modified `--cov` arg to include the script, improving visibility on its test coverage
+
 
 Database Configuration
 
