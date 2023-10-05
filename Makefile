@@ -1,4 +1,4 @@
-.PHONY: install local lint flake8 black black-fix isort isort-fix test lint-fix
+.PHONY: install local lint flake8 black black-fix isort isort-fix test lint-fix open-report
 
 .ONESHELL:
 poetry-config:
@@ -42,7 +42,14 @@ test:
 		--cov-report xml:reports/coverage.xml \
 		--junitxml=reports/unit_test_report.xml \
 		--cov-fail-under=10 \
-		--cov=spotify_api_personal_data tests/ -ra -s
+		--cov=spotify_api_personal_data tests --cov=scripts/ -ra -s
 
-coverage:
+
+#If using OSX
+open-report-osx:
 	open reports/index.html
+
+#If using WSL
+open-report-win:
+	explorer.exe `wslpath -w ./reports/index.html`
+

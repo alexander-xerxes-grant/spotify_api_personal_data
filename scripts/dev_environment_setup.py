@@ -4,18 +4,23 @@
 # check file exists > if not then create one and say you are > then take input > then write to file
 
 import os
+import re
 
 
 def check_for_env_file():
     return os.path.isfile(".env")
 
 
+def is_hex(s: str):
+    return re.fullmatch(r"[0-9a-fA-F]*", s) is not None
+
+
 def check_api_variable_length(spotify_client_var: str, spotify_client_var_name: str):
-    if len(spotify_client_var) != 32:
+    if len(spotify_client_var) != 32 or not is_hex(spotify_client_var):
         raise ValueError(f"{spotify_client_var_name} must be 32 characters long.")
 
 
-def get_input(spotify_client_var_name: str) --> str:
+def get_input(spotify_client_var_name: str) -> str:
     spotify_client_var = input(
         f"Please input your {spotify_client_var_name} (32 character string): "
     )
