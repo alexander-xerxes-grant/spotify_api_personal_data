@@ -4,3 +4,5 @@ application_import_names =
 
 exclude = .git,.history,.venv
 max-line-length = 88
+select = D
+docstring-convention = google
