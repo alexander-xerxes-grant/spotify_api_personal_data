@@ -47,6 +47,8 @@ test:
 		--cov-fail-under=10 \
 		--cov=spotify_api_personal_data tests --cov=scripts/ -ra -s
 
+docs:
+	poetry run sphinx-build docs docs/_build
 
 #If using OSX
 open-report-osx:
