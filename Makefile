@@ -13,9 +13,12 @@ local: install
 update:
 	poetry update
 
-lint: flake8 black isort
+lint: flake8 black isort darglint
 
 lint-fix: black-fix isort-fix
+
+darglint:
+	poetry run darglint
 
 flake8:
 	poetry run flake8
